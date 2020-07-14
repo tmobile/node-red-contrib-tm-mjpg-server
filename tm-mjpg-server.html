@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('tm-mjpg-server',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            detectionServerPort: {value:"22334"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "tm-mjpg-server";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="tm-mjpg-server">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="tm-mjpg-server">
+    <p>A simple node to start a python mjpg camera server on port 22334</p>
+</script>

@@ -1,0 +1,29 @@
+{
+    "name": "@tmus/node-red-contrib-tm-mjpg-server",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "python3 -m venv mjpg-env --system-site-packages && . mjpg-env/bin/activate && pip3 install -r tm-mjpg-server/requirements.txt"
+    },
+    "author": "T-Mobile",
+    "license": "Apache-2.0",
+    "node-red": {
+        "nodes": {
+            "tm-mjpg-server": "tm-mjpg-server.js"
+        }
+    },
+    "files": [
+        "tm-mjpg-server/*",
+        "tm-mjpg-server.html",
+        "tm-mjpg-server.js"
+    ],
+    "devDependencies": {
+        "eslint": "^7.3.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.21.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1"
+    }
+}

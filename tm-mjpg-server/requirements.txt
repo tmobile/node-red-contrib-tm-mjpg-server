@@ -1,0 +1,5 @@
+# Don't override system apt installed numpy and opencv-python on Raspbian.
+numpy ; platform_machine != 'armv7l'
+opencv-python ; platform_machine != 'armv7l'
+
+Pillow==6.2.2
