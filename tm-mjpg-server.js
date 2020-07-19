@@ -28,7 +28,7 @@ module.exports = (RED) => {
         if (!python || python.killed) {
             node.debug('Starting python server process')
             node.debug('Current dir is: ' + __dirname)
-            python = spawn('env/bin/python3', ['tm-mjpg-server/ServeAll.py'], {'cwd': __dirname})
+            python = spawn('mjpg-env/bin/python3', ['tm-mjpg-server/ServeAll.py'], {'cwd': __dirname})
 
             globalContext.set('tmMjpgServer', python)
             node.log('Loaded tmMjpgServer')
@@ -39,6 +39,10 @@ module.exports = (RED) => {
                 node.debug(
                     `Python server process terminated due to receipt of signal ${signal}`)
             })
+
+            serverStatus = { fill: 'green', shape: 'dot', text: 'connected' }
+
+            node.status(serverStatus)
         }
 
         node.on('close', (removed, done) => {
