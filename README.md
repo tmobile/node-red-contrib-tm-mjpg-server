@@ -17,3 +17,8 @@ A simple node to start a python mjpg camera server on port 22334
 3. Run `npm install`
 4. cd ~/.node-red/node_modules
 5. npm install <path to cloned repository> --save
+  
+## Attribution
+
+[Train Your Own Yolo](https://github.com/1208592332/TrainYourOwnYOLO)
+
