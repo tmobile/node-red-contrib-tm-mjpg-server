@@ -11,7 +11,7 @@ from threading import Thread
 
 
 def get_parent_dir(n=1):
-    """ returns the n-th parent dicrectory of the current
+    """ returns the n-th parent directory of the current
     working directory """
     current_path = os.path.dirname(os.path.abspath(__file__))
     for k in range(n):
