@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Serve MJPEG stream using cv2 video device capture interface.
+# Adapted from https://gist.github.com/n3wtron/4624820
 
 import os
 import signal
